@@ -25,6 +25,7 @@
 html,body{
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.7em;
+  background-color: #333;
 }
 
 a{
@@ -59,6 +60,11 @@ body{
   padding:0 20px;
 }
 
+.con{
+    width:100%;
+    overflow:auto;
+    height: 100vh;
+}
 .text-primary{
   color:var(--orange);
 }
@@ -155,7 +161,6 @@ body{
 }
 
 #showcase #overlay{
-  content: "Yash Industries";
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -173,7 +178,7 @@ body{
   color: var(--orange);
   margin-top: -10rem;
   font-size: 50px;
-  bottom: -300px;
+  top: 400px;
 }
 #showcase h1 p{
   margin-top: 50px;
@@ -182,21 +187,22 @@ body{
 }
 
 #overlay a{
-  color: #333;
+  color: #fff;
 }
 
 /* Slider */
 
 .slider{
-  max-width: 800px;
-  height: 500px;
+  width: 100%;
+  height: 100vh;
   overflow: hidden;
 }
 
 .slides{
   width: 500%;
-  height: 500px;
+  height: 100vh;
   display: flex;
+ 
 }
 
 .slides input{
@@ -205,25 +211,28 @@ body{
 
 .slide{
  width: 20%;
+ height: 100vh;
  transition: 2s;
  display: flex;
  justify-content: center;
- align-items: center;
+ background-color: black;
 }
 
 .slide img{
-  width: 50%;
-  height: 50%;
+  width: 90%;
+  height: 100%;
+
 }
 
 /* CSS for manual slide navigation */
 
 .navigation-manual{
-  position:  absolute;
-  width: 800px;
+  display: absolute;
+  width: 100%;
   display: flex;
-  align-items: c;
+  align-items: center;
   justify-content: center;
+  bottom: 500px;
 }
 
 .manual-btn{
@@ -262,7 +271,7 @@ body{
   position: absolute;
   display: flex;
   margin-top: 500px;
-  width: 800px;
+  width: 100%;
   justify-content: center;
 }
 
@@ -278,19 +287,19 @@ body{
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1{
-  background: #333;
+  background: var(--orange);
 }
 
 #radio2:checked ~ .navigation-auto .auto-btn2{
-  background: #333;
+  background: var(--orange);
 }
 
 #radio3:checked ~ .navigation-auto .auto-btn3{
-  background: #333;
+  background: var(--orange);
 }
 
 #radio4:checked ~ .navigation-auto .auto-btn4{
-  background: #333;
+  background: var(--orange);
 }
       
 

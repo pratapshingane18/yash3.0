@@ -1,0 +1,406 @@
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
+
+
+/* Variables */
+:root{
+ --load_bg : #38c172;
+ --orange: #f57323;
+}
+
+/* Defaults */
+
+*,*::before, *::after{
+  box-sizing: border-box;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Main Styling */
+html,body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7em;
+}
+
+a{
+  color:#333;
+  text-decoration: none;
+}
+
+h1,h2,h3{
+  padding-bottom:20px;
+}
+
+p{
+  margin:10px 0;
+}
+
+/* Body */
+body{
+  font-family: 'Roboto Slab', serif;
+  line-height: 1.4rem;
+  overflow-x: hidden;
+}
+
+
+
+
+/* Utility Class  */
+
+.container{
+  margin:auto;
+  max-width:1100px;
+  overflow:auto;
+  padding:0 20px;
+}
+
+.text-primary{
+  color:var(--orange);
+}
+
+.btn{
+  font-weight: bold;
+  display: inline-block;
+  background-color: #333;
+  padding: 15px 25px;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 0.5em;
+}
+.btn_lite{
+  color:#333;
+  background: #f4f4f4;
+}
+.btn:hover{
+  background-color: var(--orange);
+  color:black;
+}
+
+.bg_dark{
+  background-color: #333;
+  border: 1px --orange solid;
+  color:#fff;
+}
+.bg_primary{
+  background-color: var(--orange);
+  color:#333;
+}
+.bg_dark{
+  background-color: #333;
+  color:#fff;
+}
+
+.bg_lite{
+  color:#333;
+  background: #f4f4f4;
+}
+
+.l_size{
+  font-size:35px;
+}
+/* Padding Y  */
+.paddy-3{
+  padding:30px 0;
+}
+.paddy-2{
+  padding:20px 0;
+}
+.paddy-1{
+  padding:10px 0;
+}
+
+/* Navbar */
+#navbar{
+  background: #333;
+  overflow:auto;
+  color:#fff;
+}
+#navbar a{
+  color:#fff;
+}
+#navbar .logo{
+  float:left;
+  padding-top:20px;
+}
+#navbar ul{
+  list-style: none;
+  float:right;
+}
+#navbar ul li{
+  float:left;
+}
+#navbar ul li a{
+  display: block;
+  padding: 20px;
+  text-align: center;
+}
+#navbar ul li a:hover,
+#navbar ul li a.current{
+  background:#444;
+  color:var(--orange);
+}
+
+/* Showcase */
+#showcase .container {
+  height: 100vh;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#showcase #overlay{
+  content: "Yash Industries";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 62px;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1px;
+  background-color: rgba(68, 68, 68, 0.459);  
+}
+
+#showcase h1{
+  position: relative;
+  text-align: center;
+  color: var(--orange);
+  margin-top: -10rem;
+  font-size: 50px;
+  bottom: -300px;
+}
+#showcase h1 p{
+  margin-top: 50px;
+  font-size: 20px;
+  bottom: -300px;
+}
+
+#overlay a{
+  color: #333;
+}
+
+/* Slider */
+
+.slider{
+  max-width: 800px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.slides{
+  width: 500%;
+  height: 500px;
+  display: flex;
+}
+
+.slides input{
+  display: none;
+}
+
+.slide{
+ width: 20%;
+ transition: 2s;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.slide img{
+  width: 50%;
+  height: 50%;
+}
+
+/* CSS for manual slide navigation */
+
+.navigation-manual{
+  position:  absolute;
+  width: 800px;
+  display: flex;
+  align-items: c;
+  justify-content: center;
+}
+
+.manual-btn{
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 1s;
+
+}
+
+.manual-btn:not(:last-child){
+  margin-right: 40px;
+}
+
+.manual-btn:hover{
+  background: #333;
+}
+
+#radio1:checked ~ .first{
+  margin-left: 0%;
+}
+#radio2:checked ~ .first{
+  margin-left: -20%;
+}
+#radio3:checked ~ .first{
+  margin-left: -40%;
+}
+#radio4:checked ~ .first{
+  margin-left: -60%;
+}
+
+/*css for automatic navigation*/
+
+.navigation-auto{
+  position: absolute;
+  display: flex;
+  margin-top: 500px;
+  width: 800px;
+  justify-content: center;
+}
+
+.navigation-auto div{
+  border: 2px solid #fff;
+  padding: 5px;
+  border-radius: 10px;
+  transition: 1s;
+}
+
+.navigation-auto div:not(:last-child){
+  margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1{
+  background: #333;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2{
+  background: #333;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3{
+  background: #333;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4{
+  background: #333;
+}
+      
+
+/* Info-content */
+#home_info {
+  height:800px;
+}
+#home_info .info_img{
+  float:left;
+  background: url('../IMAGES/tractor.jpg') no-repeat 
+  center center/cover;
+  min-height:100%;
+  width:50%;
+}
+
+#home_info .info_content{
+  float:right;
+  text-align: center;
+  width:50%;
+  height: 100%;   
+}
+#home_info .info_content h1{
+  padding-top:200px;
+  font-size: 30px;
+}
+#home_info .info_content p{
+  padding: 40px 50px ;
+  line-height: 1.7em;
+}
+
+
+/* Features */
+
+.box{
+  float : left;
+  width:33.3%;
+  padding:50;
+  text-align:center;
+  height:250px;
+}
+
+.box i{
+  margin-bottom: 10px;
+  margin-top:20px;
+}
+
+
+
+/* Footer */
+
+
+#main_footer{
+  text-align:center;
+  background:#444;
+  color: #fff;
+  padding:20px;
+}
+
+
+/* Loader */
+#Load-container{
+  width: 100%;
+  height: 1vh;
+}
+
+#loading-overlay{
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:100%;
+  height: 100%;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  color:white;
+  z-index: 2;
+}
+lottie-player{
+  margin: auto;
+}
+
+.progress-bar{
+  position: relative;
+  width: 500px ;
+  height: 3em;
+  background-color: #fff;
+  border-radius: 1.5em;
+  color:#fff;
+}
+
+.progress-bar::before{
+  content: attr(data-label);
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: .5em;
+  top: .5em;
+  bottom: .5em;
+  width: calc(var(--width, 0)*1%);
+  min-width: 2rem;
+  max-width: calc(100% - 1em);
+  background-color: var(--orange);
+  border-radius: 1em;
+  padding: 1em;
+}
+.Loader{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -48,8 +48,9 @@ body{
     height: 235px;
     width: 235px;
     border-radius: 50%;
-   
-    border: 5px solid #000;
+    display: block;
+    
+    border: 5px solid #fff;
     
 }
 
@@ -78,3 +79,25 @@ body{
 
 }
 
+
+/* Responsive */
+
+
+@media screen and (max-width: 600px) {
+    .slideshow-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .image{
+    margin: auto;
+  }
+  .quote h5{
+    width: 100%;
+    text-align: left;
+    font-size: 12px;
+  }
+  .fa-quote-left, .fa-quote-right {display: none;}
+  .name{ font-size: 14px;}
+}

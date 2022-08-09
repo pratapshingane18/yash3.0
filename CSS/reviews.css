@@ -100,4 +100,5 @@ body{
   }
   .fa-quote-left, .fa-quote-right {display: none;}
   .name{ font-size: 14px;}
+  .heading{font-size: 20px;}
 }
